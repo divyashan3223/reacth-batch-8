@@ -6,12 +6,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
 }
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-.ul {
-  background-color: white;
+img {
+  height: 200px;
 }

@@ -1,19 +1,18 @@
 import React from "react";
 import "./demo.css";
+import img from "../assets/eagle.jpg";
 const Demo = () => {
+  let person = {
+    name: "frenzo",
+    age: 22,
+    size: 10,
+    image: img,
+  };
   return (
     <div className="container">
-      <main>
-        <h1>hello</h1>
-        <p>welcome to frenzo</p>
-      </main>
-      <ul className="ul">
-        <li>child1</li>
-        <li>child2</li>
-        <li>child3</li>
-        <li>child4</li>
-        <li>child5</li>
-      </ul>
+      <h1>name:{person.name}</h1>
+      <h2>{person.age}</h2>
+      <img src={`${person.image}`} alt="" />
     </div>
   );
 };
