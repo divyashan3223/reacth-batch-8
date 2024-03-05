@@ -1,20 +1,21 @@
 import React from "react";
-
-export const Demo = () => {
+import "./demo.css";
+const Demo = () => {
   return (
-    <div>
-      <h1>welcome to frenzo technologies</h1>
+    <div className="container">
+      <main>
+        <h1>hello</h1>
+        <p>welcome to frenzo</p>
+      </main>
+      <ul className="ul">
+        <li>child1</li>
+        <li>child2</li>
+        <li>child3</li>
+        <li>child4</li>
+        <li>child5</li>
+      </ul>
     </div>
   );
 };
 
-const Demo2 = () => {
-  return (
-    <div>
-      <Demo />
-      <h2>this is nestedd component</h2>
-    </div>
-  );
-};
-
-export default Demo2;
+export default Demo;
