@@ -1,21 +1,31 @@
-import React from "react";
+import Login from "./Login";
+import Logout from "./Logout";
+
+// const Demo = () => {
+//   let isLogin = true;
+//   if (isLogin) {
+//     return <Logout />;
+//   } else {
+//     return <Login />;
+//   }
+// };
+
+// export default Demo;
+
+// const Demo = () => {
+//   let name = "divi";
+//   let userName = "divi";
+//   let isLogin = name == userName;
+//   return <div>{isLogin ? <Login /> : <Logout />}</div>;
+// };
+
+// export default Demo;
 
 const Demo = () => {
-  let persons = [
-    { name: "dhars", age: 22, id: 1 },
-    { name: "dinesh", age: 22, id: 2 },
-    { name: "roshini", age: 22, id: 3 },
-    { name: "prabav", age: 22, id: 4 },
-  ];
-
-  let details = persons.map((person) => (
-    <li key={person.id}>age:{person.age}</li>
-  ));
-  return (
-    <div>
-      <ul>{details}</ul>
-    </div>
-  );
+  let name = "divi";
+  let userName = "div";
+  let isLogin = name == userName;
+  return <div>{isLogin || <Login />}</div>;
 };
 
 export default Demo;
