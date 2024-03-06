@@ -1,18 +1,19 @@
 import React from "react";
-import "./demo.css";
-import img from "../assets/eagle.jpg";
+
 const Demo = () => {
-  let person = {
-    name: "frenzo",
-    age: 22,
-    size: 10,
-    image: img,
-  };
+  let persons = [
+    { name: "dhars", age: 22, id: 1 },
+    { name: "dinesh", age: 22, id: 2 },
+    { name: "roshini", age: 22, id: 3 },
+    { name: "prabav", age: 22, id: 4 },
+  ];
+
+  let details = persons.map((person) => (
+    <li key={person.id}>age:{person.age}</li>
+  ));
   return (
-    <div className="container">
-      <h1>name:{person.name}</h1>
-      <h2>{person.age}</h2>
-      <img src={`${person.image}`} alt="" />
+    <div>
+      <ul>{details}</ul>
     </div>
   );
 };
