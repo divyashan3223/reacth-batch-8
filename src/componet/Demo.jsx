@@ -1,31 +1,15 @@
-import Login from "./Login";
-import Logout from "./Logout";
-
-// const Demo = () => {
-//   let isLogin = true;
-//   if (isLogin) {
-//     return <Logout />;
-//   } else {
-//     return <Login />;
-//   }
-// };
-
-// export default Demo;
-
-// const Demo = () => {
-//   let name = "divi";
-//   let userName = "divi";
-//   let isLogin = name == userName;
-//   return <div>{isLogin ? <Login /> : <Logout />}</div>;
-// };
-
-// export default Demo;
+import React from "react";
+import Button from "./Button/Button";
 
 const Demo = () => {
-  let name = "divi";
-  let userName = "div";
-  let isLogin = name == userName;
-  return <div>{isLogin || <Login />}</div>;
+  return (
+    <>
+      <Button content={"sign in"} />
+      <Button content={"log out"} />
+      <Button />
+      <Button />
+    </>
+  );
 };
 
 export default Demo;

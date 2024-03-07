@@ -1,5 +1,6 @@
 import "./App.css";
-import Demo2 from "./componet/Demo";
+import Demo from "./componet/Demo";
+// import Demo2 from "./componet/Demo";
 // import { useCallback, useMemo, useState } from "react";
 // import ChildComponent from "./components/ChildComponent";
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <Demo2 />
+      <Demo />
       {/* <h1>{count}</h1>
       <ChildComponent handleClick={handleClick} /> */}
     </div>
