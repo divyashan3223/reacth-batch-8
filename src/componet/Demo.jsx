@@ -4,10 +4,12 @@ import Button from "./Button/Button";
 const Demo = () => {
   return (
     <>
-      <Button content={"sign in"} />
-      <Button content={"log out"} />
-      <Button />
-      <Button />
+      <Button
+        content={"login"}
+        bgColor={"yellow"}
+        color={"blue"}
+        size={"40px"}
+      />
     </>
   );
 };
