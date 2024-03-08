@@ -1,16 +1,33 @@
 import React from "react";
-import "./button.css";
-const Button = ({ content, color, bgColor, size }) => {
-  return (
-    <div>
-      {/* <button className={`${color}`}>{content}</button> */}
-      <button
-        style={{ backgroundColor: bgColor, color: color, fontSize: size }}
-      >
-        {content}
-      </button>
-    </div>
-  );
+
+const Button = ({ user = false }) => {
+  // return user ? (
+  //   <div>
+  //     <h1>insta open</h1>
+  //     <button>logout</button>
+  //   </div>
+  // ) : (
+  //   <>
+  //     <h1>log in first</h1>
+  //     <button>login</button>
+  //   </>
+  // );
+
+  if (user) {
+    return (
+      <div>
+        <h1>insta open</h1>
+        <button>logout</button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h1>login first</h1>
+        <button>login</button>
+      </div>
+    );
+  }
 };
 
 export default Button;
