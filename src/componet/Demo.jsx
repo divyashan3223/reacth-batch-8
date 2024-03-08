@@ -3,8 +3,8 @@ import Button from "./Button/Button";
 const Demo = () => {
   return (
     <>
-      <Button user>login</Button>
-      <Button>logout</Button>
+      <Button showHolder>show</Button>
+      <Button>hidden</Button>
     </>
   );
 };
