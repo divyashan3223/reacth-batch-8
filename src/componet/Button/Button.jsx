@@ -1,10 +1,13 @@
 import React from "react";
 
-const Button = ({ showHolder = false }) => {
+const Button = () => {
+  let handleClick = () => {
+    alert("hello");
+  };
   return (
     <div>
-      {showHolder || <h1>header</h1>}
-      <button>submit</button>
+      <h1>hello friends</h1>
+      <button onClick={() => handleClick()}>click me the button</button>
     </div>
   );
 };
