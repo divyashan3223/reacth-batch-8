@@ -1,15 +1,31 @@
 import React from "react";
 
-const Button = () => {
-  let handleClick = () => {
-    alert("hello");
-  };
-  return (
-    <div>
-      <h1>hello friends</h1>
-      <button onClick={() => handleClick()}>click me the button</button>
-    </div>
-  );
-};
+function Form() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-export default Button;
+    const username = formData.get("name");
+    console.log(username);
+    // const password = formData.get("password");
+    // console.log(" username:", username, "and password:", password);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Username:
+        <input type="text" name="name" id="one" />
+      </label>
+      <br />
+      <label>
+        Password:
+        <input type="password" name="password" />
+      </label>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default Form;

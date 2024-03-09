@@ -1,9 +1,10 @@
 import React from "react";
-import Button from "./Button/Button";
+import Form from "./Button/Button";
+
 const Demo = () => {
   return (
     <>
-      <Button />
+      <Form />
     </>
   );
 };
