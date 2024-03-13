@@ -1,4 +1,5 @@
 import "./App.css";
+import AddingCount from "./components/hooks/AddingCount";
 import Demo from "./componet/Demo";
 // import Demo from "./componet/Demo";
 // import Demo2 from "./componet/Demo";
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <Demo />
+      <AddingCount />
       {/* <h1>{count}</h1>
       <ChildComponent handleClick={handleClick} /> */}
     </div>
