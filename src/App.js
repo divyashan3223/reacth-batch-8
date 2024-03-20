@@ -1,6 +1,9 @@
 import "./App.css";
 import AddingCount from "./components/hooks/AddingCount";
 import Demo from "./componet/Demo";
+import User from "./task/Them";
+import MyComponent from "./task/Useeffecttask";
+import TaskList from "./task/Usestate";
 // import Demo from "./componet/Demo";
 // import Demo2 from "./componet/Demo";
 // import { useCallback, useMemo, useState } from "react";
