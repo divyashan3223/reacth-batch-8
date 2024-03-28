@@ -1,14 +1,19 @@
 import "./App.css";
-import AddingCount from "./components/hooks/AddingCount";
-import Demo from "./componet/Demo";
-import User from "./task/Them";
-import MyComponent from "./task/Useeffecttask";
-import TaskList from "./task/Usestate";
-// import Demo from "./componet/Demo";
-// import Demo2 from "./componet/Demo";
+
 // import { useCallback, useMemo, useState } from "react";
 // import ChildComponent from "./components/ChildComponent";
 
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./router/Home";
+import About from "./router/About";
+import Context from "./router/Context";
+import Signin from "./router/Signin";
+import Error from "./router/Error";
+import Logo from "./router/Logo";
+import User from "./router/useprames/User";
+import Login from "./router/Login";
+import Dashboard from "./router/Dashboard";
+import { Max } from "./memo/Memo";
 function App() {
   // const [count, setCount] = useState(0);
 
@@ -20,9 +25,7 @@ function App() {
 
   return (
     <div>
-      <AddingCount />
-      {/* <h1>{count}</h1>
-      <ChildComponent handleClick={handleClick} /> */}
+      <Max />
     </div>
   );
 }
