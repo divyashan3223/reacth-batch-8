@@ -1,9 +1,10 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
+
+import Todos from "./Todos";
 
 export const Max = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
-  const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
   const increment = () => {
     setCount((c) => c + 1);
@@ -13,29 +14,30 @@ export const Max = () => {
   };
 
   return (
-    <div>
-      <div>
-        <h2>My Todos</h2>
-        {todos.map((todo, index) => {
-          return <p key={index}>{todo}</p>;
-        })}
-        <button onClick={addTodo}>Add Todo</button>
-      </div>
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
       <hr />
       <div>
         Count: {count}
         <button onClick={increment}>+</button>
-        <h2>Expensive Calculation</h2>
-        {calculation}
       </div>
-    </div>
+    </>
   );
 };
 
-const expensiveCalculation = (num) => {
-  console.log("Calculating...");
-  for (let i = 0; i < 1000000000; i++) {
-    num += 1;
-  }
-  return num;
+import { memo } from "react";
+
+const Todos = ({ todos, addTodo }) => {
+  console.log("child render");
+  return (
+    <>
+      <h2>My Todos</h2>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
+      })}
+      <button onClick={addTodo}>Add Todo</button>
+    </>
+  );
 };
+
+export default memo(Todos);
