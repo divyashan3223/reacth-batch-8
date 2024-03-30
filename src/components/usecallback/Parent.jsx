@@ -1,22 +1,29 @@
-import React, { useCallback, useState } from "react";
-import Child from "./Child";
+import React, { useState, useCallback } from "react";
 
-const Parent = () => {
+function Parent() {
   const [count, setCount] = useState(0);
-  const [totos, setTotos] = useState([]);
-  const increment = () => {
+
+  // Define a function that increments the count
+  const incrementCount = () => {
+    console.log("kdjflkasj");
     setCount(count + 1);
   };
-  const addtotos = useCallback(() => {
-    setTotos((t) => [...t, "new Todos"]);
-  }, []);
+
+  console.log("dharshuuu");
+  //   Memoize the incrementCount function using useCallback
+  const memoizedIncrement = useCallback(() => {
+    console.log("child");
+    incrementCount();
+  }, [count]);
+
   return (
     <div>
-      <Child totos={totos} addtotos={addtotos} />
-      <p>count:{count}</p>
-      <button onClick={increment}>count add</button>
+      <p>Count: {count}</p>
+      {/* Use the memoized function in the onClick handler */}
+      <button onClick={memoizedIncrement}>Increment</button>
+      <button onClick={incrementCount}>Increment</button>
     </div>
   );
-};
+}
 
 export default Parent;

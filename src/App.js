@@ -1,4 +1,5 @@
 import "./App.css";
+import Usecontext from "./components/context/Usecontext";
 import Parent from "./components/usecallback/Parent";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div>
-      <Parent />
+      <Usecontext />
     </div>
   );
 }
