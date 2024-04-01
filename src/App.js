@@ -1,4 +1,5 @@
 import "./App.css";
+import Data from "./components/Data";
 import Usecontext from "./components/context/Usecontext";
 import Parent from "./components/usecallback/Parent";
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <Usecontext />
+      <Data />
     </div>
   );
 }
